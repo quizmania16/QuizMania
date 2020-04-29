@@ -1,0 +1,192 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+  }
+  
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .container {
+    width: 1000px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .btn-home-grid {
+    display: grid;
+    grid-template-columns: repeat(0, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+  .btn-correct{
+    background-color: greenyellow;
+    color: black;    
+}
+.btn-wrong{
+    background-color: crimson;
+    color: black;    
+}
+
+.btn-general{
+    height:'7vh';
+    width:'8vw';
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    box-shadow: 0 0 5px 2px;
+
+}
+
+.home-container{
+    padding-top:'40px';
+    text-align: "center";
+    height:'20vh';
+    width:'30vw';
+    align-content:'center';
+    justify-content:'center';
+}
+
+.btn-right{
+    float: right;
+    padding-right: 40px;
+    text-align: center;
+    align-items: center;    
+}
+
+.btn-center{
+  float: inherit;
+  padding: 40px;
+  text-align: center;
+  align-items: center;    
+}
+
+.question-input{
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: blanchedalmond;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+  height:'7vh';
+  width:'18vw';
+  font-family: 'Franklin Gothic Medium';
+  font-size: medium;
+  box-shadow: 0 0 5px 2px;
+}
+
+.option-input{
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: blanchedalmond;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+  height:'7vh';
+  width:'4vw';
+  font-family: 'Franklin Gothic Medium';
+  font-size: medium;
+  box-shadow: 0 0 5px 2px;
+}
+
+.question-number{
+  color: black;
+  font-family: 'Franklin Gothic Medium';
+  font-size: medium;
+}
+
+.show-question-number{
+  color: black;
+  font-family: 'Franklin Gothic Medium';
+  font-size: medium;
+}
+
+.show-quiz-name{
+  color: black;
+  font-family: 'Franklin Gothic Medium';
+  font-size: xx-large;
+}
+
+.title-input{
+  height: 7vh;
+  width: 30vw;
+  font-size: x-large;
+}
+
+.no-questions-input{
+  height: 7vh;
+  width:5vw;
+  font-size: x-large;
+}
