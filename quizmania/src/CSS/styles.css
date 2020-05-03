@@ -1,26 +1,37 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: Gotham Rounded;
-  }
-  
-  :root {
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
-  }
-  
-  body {
-    --hue: var(--hue-neutral);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(var(--hue), 100%, 20%);
-  }
-  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+.body-bg {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+  /* width: 110vw; */
+  /* height: 100vh;  */
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+/*  
   body.correct {
     --hue: var(--hue-correct);
   }
@@ -28,110 +39,127 @@
   body.wrong {
     --hue: var(--hue-wrong);
   }
-  
-  .container {
-    width: 1000px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
-    
-  }
-  
-  .btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-  }
-  .btn-home-grid {
-    display: grid;
-    grid-template-columns: repeat(0, auto);
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .btn {
-    --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
-    outline: none;
-  }
-  
-  .btn:hover {
-    border-color: black;
-  }
-  
-  .btn.correct {
-    --hue: var(--hue-correct);
-    color: black;
-  }
-  
-  .btn.wrong {
-    --hue: var(--hue-wrong);
-  }
-  
-  .start-btn, .next-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
-  
-  .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hide {
-    display: none;
-  }
-  .btn-correct{
-    background-color: greenyellow;
-    color: black;    
-}
-.btn-wrong{
-    background-color: crimson;
-    color: black;    
+   */
+.container {
+  width: 1000px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
 }
 
-.btn-general{
-    height:'7vh';
-    width:'8vw';
-    font-family: 'Franklin Gothic Medium';
-    font-size: medium;
-    box-shadow: 0 0 5px 2px;
-
+.home-container-buttons {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
-.home-container{
-    padding-top:'40px';
-    text-align: "center";
-    height:'20vh';
-    width:'30vw';
-    align-content:'center';
-    justify-content:'center';
+.login-container {
+  width: 700px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 0 10px 2px;
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+.btn-home-grid {
+  display: grid;
+  grid-template-columns: repeat(0, auto);
+  gap: 10px;
+  margin: 20px 0;
 }
 
-.btn-right{
-    float: right;
-    padding-right: 40px;
-    text-align: center;
-    align-items: center;    
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
 }
 
-.btn-center{
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+.btn-correct {
+  background-color: greenyellow;
+  color: black;
+}
+.btn-wrong {
+  background-color: crimson;
+  color: black;
+}
+
+.btn-general {
+  height: "7vh";
+  width: "8vw";
+  font-family: "Franklin Gothic Medium";
+  font-size: medium;
+  box-shadow: 0 0 5px 2px;
+}
+
+.home-container {
+  padding-top: "40px";
+  text-align: "center";
+  height: "20vh";
+  width: "30vw";
+  align-content: "center";
+  justify-content: "center";
+}
+
+.btn-right {
+  float: right;
+  padding-right: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+.btn-center {
   float: inherit;
   padding: 40px;
   text-align: center;
-  align-items: center;    
+  align-items: center;
 }
 
-.question-input{
+.question-input {
   --hue: var(--hue-neutral);
   border: 1px solid hsl(var(--hue), 100%, 30%);
   background-color: blanchedalmond;
@@ -139,14 +167,14 @@
   padding: 5px 10px;
   color: black;
   outline: none;
-  height:'7vh';
-  width:'18vw';
-  font-family: 'Franklin Gothic Medium';
+  height: "7vh";
+  width: "18vw";
+  font-family: "Franklin Gothic Medium";
   font-size: medium;
   box-shadow: 0 0 5px 2px;
 }
 
-.option-input{
+.option-input {
   --hue: var(--hue-neutral);
   border: 1px solid hsl(var(--hue), 100%, 30%);
   background-color: blanchedalmond;
@@ -154,39 +182,175 @@
   padding: 5px 10px;
   color: black;
   outline: none;
-  height:'7vh';
-  width:'4vw';
-  font-family: 'Franklin Gothic Medium';
+  height: "7vh";
+  width: "4vw";
+  font-family: "Franklin Gothic Medium";
   font-size: medium;
   box-shadow: 0 0 5px 2px;
 }
 
-.question-number{
+.quiz-result-title {
   color: black;
-  font-family: 'Franklin Gothic Medium';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium";
+  font-size: larger;
+}
+
+.question-number {
+  color: black;
+  font-family: "Franklin Gothic Medium";
   font-size: medium;
 }
 
-.show-question-number{
+.show-question-number {
   color: black;
-  font-family: 'Franklin Gothic Medium';
+  font-family: "Franklin Gothic Medium";
   font-size: medium;
 }
 
-.show-quiz-name{
+.show-quiz-name {
   color: black;
-  font-family: 'Franklin Gothic Medium';
+  font-family: "Franklin Gothic Medium";
   font-size: xx-large;
 }
 
-.title-input{
+.heading {
+  align-items: center;
+  text-align: center;
+}
+
+.title-input {
   height: 7vh;
   width: 30vw;
+  background-color: blanchedalmond;
   font-size: x-large;
 }
 
-.no-questions-input{
+.no-questions-input {
   height: 7vh;
-  width:5vw;
+  width: 5vw;
+  background-color: blanchedalmond;
   font-size: x-large;
+}
+
+.sign-up {
+  padding-top: 1.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: blue;
+  font-size: medium;
+}
+.sign-up-link {
+  padding-top: 1.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.field-error {
+  color: red;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.center-body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+.quizNavbar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  background-color: rgba(4, 32, 31, 0.781);
+}
+
+.brand-title {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navItem {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-button:hover {
+  color: whitesmoke;
+  background-color: rgba(4, 32, 31, 0.781);
+}
+
+.nav-button-title:hover {
+  color: whitesmoke;
+  background-color: rgba(4, 32, 31, 0.781);
+}
+
+.nav-button-title {
+  background: none;
+  border: none;
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sign-up-button {
+  background: none;
+  border: none;
+}
+
+
+.join-quiz-box{
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table-heading-display{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  text-align: center;
+  align-items: center;
+  color: dimgray;
+  font-weight: bolder;
+
+}
+
+
+.table-display{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium; 
+  text-align: center; 
+}
+
+.quiz-resultbox{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10;
 }

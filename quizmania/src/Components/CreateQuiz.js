@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 import CreateAllQuizQuestions from "./CreateAllQuizQuestions";
 
 export default class CreateQuiz extends React.Component {
@@ -35,13 +37,14 @@ export default class CreateQuiz extends React.Component {
     let quizTitle = this.state.quizName;
     return (
       <div className="container" style={{ paddingBottom: "15px" }}>
+        <Link to='/'><button className="btn start-btn">BACK</button></Link>
         {!showQuestionPage && (
           <>
             <div className="row">
-              <div className="col-xs-4">
-                <h3 className="show-quiz-name">Enter Quiz Title</h3>
+              <div className="col-xs-4" style={{marginLeft:'30px'}}>
+                <h3 className="show-quiz-name">Enter Quiz Title : </h3>
               </div>
-              <div className="col-xs-2">
+              <div className="col-xs-7">
                 <h3 className="show-quiz-name">
                   <input
                     type="text"
@@ -59,10 +62,10 @@ export default class CreateQuiz extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-xs-4">
-                <h3 className="show-quiz-name">Total Questions</h3>
+              <div className="col-xs-4" style={{marginLeft:'30px'}}>
+                <h3 className="show-quiz-name">Total Questions :</h3>
               </div>
-              <div className="col-xs-2">
+              <div className="col-xs-7">
                 <h3 className="show-quiz-name">
                   <input
                     type="text"

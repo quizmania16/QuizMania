@@ -31,11 +31,14 @@ export default class AllQuizQuestions extends React.Component {
     let questionNumber = this.state.currentQuestionNumber;
     let totalMarks = this.state.totalMarks;
     let passMark = this.state.quiz.quiz_max_mark;
+    let quiz_name = this.state.quiz.quiz_name;
+    console.log(passMark)
     return (
       <div className="container">
-        <h1 className="show-quiz-name">{this.state.quiz.quiz_name}</h1>
+        <h1 className="show-quiz-name">{quiz_name}</h1>
         {questions && questions.length > 0 && (
           <Question
+            quizName = {quiz_name}
             questionNumber={questions[questionNumber].question_id}
             question={questions[questionNumber].question_text}
             options={questions[questionNumber].options}

@@ -32,7 +32,7 @@ export default class Question extends React.Component {
     }
     btnColors[this.props.answer] += " btn-correct";
 
-    this.setState({ ...this.state, disableButton: true, btnColor: btnColors });
+    this.setState({ ...this.state, disableButton: true, btnColor: btnColors,lastQues : marks });
     this.props.updateMark(marks);
   };
 
@@ -94,8 +94,10 @@ export default class Question extends React.Component {
             to={{
               pathname: "/result",
               totalMarks: this.props.totalMarks,
+              totalQuizQuestions:this.props.allQuestions.length,
+              name:this.props.quizName,
               result:
-                this.props.totalMarks >= this.props.passmark
+                (this.props.totalMarks+this.state.lastQues >= this.props.passMark)
                   ? "Passed"
                   : "Failed",
             }}
